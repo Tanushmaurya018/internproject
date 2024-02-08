@@ -24,7 +24,7 @@ const coachSchema = new mongoose.Schema({
       required: true,
       unique: true,
     },
-    password: {
+    hashedPassword: {
       type: String,
       required: true,
     },
