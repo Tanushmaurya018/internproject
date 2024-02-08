@@ -85,7 +85,7 @@ const coachSchema = new mongoose.Schema({
     },
     achievements: {
       type: String,
-      requird:true,
+      required:true,
     },
     familiarityToTeach: {
       type: String,
@@ -130,10 +130,14 @@ const workExperienceSchema = new mongoose.Schema({
   },
   typeOfTraining: {
     type: String,
+    enum:typeOfTrainingEnum,
+    default:"Private"
     
   },
   trainedAgeGroup: {
     type: String,
+    enum:trainedAgedGroup,
+    default:"Babies",
   },
 
   reasonTOLeave: {
